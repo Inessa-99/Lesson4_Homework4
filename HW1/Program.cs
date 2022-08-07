@@ -3,28 +3,23 @@
 2, 4 -> 16*/
 
 Console.WriteLine("Введите число А");
-int a = int.Parse(Console.ReadLine());
+int a = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Введите число B");
-int b = int.Parse(Console.ReadLine());
+int b = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine(degree(a, b));
+int deg = degree(a, b);
+Console.WriteLine(deg);
 
 int degree(int first, int second)
 {
-    int resss = 0;
-    if (second == 1)
+    int result = 1;
+    for (int i = 1; i <= second; i++)
     {
-        int resss = first;
+        result = result * first;
     }
-    else
-    {
-        for (int i = 2; i <= second; i++)
-        {
-            int resss = first * first;
-        }
-    }
-    return resss;
+    return result;
 }
+
 
 
